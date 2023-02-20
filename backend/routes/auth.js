@@ -4,7 +4,7 @@ const router = express.Router();
 const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const jwt_secret= 'cloud$pen';
+const jwt_secret= process.env.JWT_SECRET;
 const fetchuser = require('../middleware/fetchuser');
 
 

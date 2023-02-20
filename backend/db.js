@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const mongoUrl = 'mongodb://localhost:27017/cloudpen?directConnection=true&tls=false&readPreference=primary'
+const mongoUrl = process.env.MONGO_DB_URL;
 
 const connectToMongo = () =>{
     mongoose.connect(mongoUrl,()=>{
