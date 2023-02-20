@@ -3,6 +3,7 @@ const connectToMongo = require('./db')
 const express = require('express')
 const authRoute = require('./routes/auth')
 const notesRoute = require('./routes/notes')
+
 console.log(process.env.APP_PORT, process.env.JWT_SECRET, process.env.MONGO_DB_URL)
 
 connectToMongo();

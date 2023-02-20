@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const jwt_secret = 'cloud$pen';
+const jwt_secret = process.env.JWT_SECRET;
 
 const fetchuser = (req, res, next) =>{
     // Get the user from the jwt token and add id to req object
