@@ -5,11 +5,12 @@ import NoteItem from './NoteItem';
 
 function Notes() {
     const context = useContext(notesContext);
-    const {notes, setNotes} = context;
+    const {notes} = context;
   return (
-    <div>
+    <div className='notes'>
+        <h2 className='heading'>Your Saved Notes</h2>
         {notes.map((note)=>{
-            return <NoteItem note={note}/>
+            return <NoteItem note={note} key={note._id}/>
         })}
     </div>
   )

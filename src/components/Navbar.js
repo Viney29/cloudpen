@@ -1,11 +1,7 @@
-import React,{useEffect}  from 'react'
 import {Link, useLocation} from 'react-router-dom'
 
 const Navbar = (props) => {
   let location = useLocation();
-  useEffect(() =>{
-    console.log(location.pathname);
-  },[location]);
   return (
       <header className='header'>
           <nav className='nav'>
