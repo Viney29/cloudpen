@@ -8,7 +8,8 @@ console.log(process.env.APP_PORT, process.env.JWT_SECRET, process.env.MONGO_DB_U
 
 connectToMongo();
 const app = express()
-const port = process.env.APP_PORT
+// const port = process.env.APP_PORT
+const port = 4000
 
 
 app.use(express.json())
