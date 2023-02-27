@@ -3,15 +3,17 @@ const connectToMongo = require('./db')
 const express = require('express')
 const authRoute = require('./routes/auth')
 const notesRoute = require('./routes/notes')
+const cors = require('cors')
 
 console.log(process.env.APP_PORT, process.env.JWT_SECRET, process.env.MONGO_DB_URL)
 
 connectToMongo();
+
 const app = express()
 // const port = process.env.APP_PORT
 const port = 4000
 
-
+app.use(cors())
 app.use(express.json())
 
 // Available routes
